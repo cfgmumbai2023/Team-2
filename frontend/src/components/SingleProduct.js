@@ -1,6 +1,7 @@
 import { Card, Button } from "react-bootstrap";
 import { CartState } from "../context/Context";
 import Rating from "./Rating";
+import logo from '../img/football.jpeg'
 
 const SingleProduct = ({ prod }) => {
   const {
@@ -11,15 +12,15 @@ const SingleProduct = ({ prod }) => {
   return (
     <div className="products">
       <Card>
-        <Card.Img variant="top" src={prod.image} alt={prod.name} />
+        <Card.Img variant="top" src={logo} alt={prod.name} />
         <Card.Body>
           <Card.Title>{prod.name}</Card.Title>
           <Card.Subtitle style={{ paddingBottom: 10 }}>
-            <span>₹ {prod.price.split(".")[0]}</span>
+            <span>{prod.price.split(".")[0]} Hours</span>
             {prod.fastDelivery ? (
-              <div>Fast Delivery</div>
+              <div>Coach No.1</div>
             ) : (
-              <div>4 days delivery</div>
+              <div>Coach No.2</div>
             )}
             <Rating rating={prod.ratings} />
           </Card.Subtitle>
@@ -33,7 +34,7 @@ const SingleProduct = ({ prod }) => {
                 })
               }
             >
-              Remove from Cart
+              Remove Course
             </Button>
           ) : (
             <Button
@@ -45,7 +46,7 @@ const SingleProduct = ({ prod }) => {
               }
               disabled={!prod.inStock}
             >
-              {!prod.inStock ? "Out of Stock" : "Add to Cart"}
+              {!prod.inStock ? "Course Not Available" : "Add Course"}
             </Button>
           )}
         </Card.Body>
