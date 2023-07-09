@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:C:\DB\jpmc
+    username: sa
+    password: password
+    dataSource-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
