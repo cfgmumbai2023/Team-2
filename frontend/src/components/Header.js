@@ -106,7 +106,7 @@ const Header = () => {
           </Dropdown>
           <Link to="/Profile">
                     <Button style={{ width: "95%", margin: "0 10px" }}>
-                      Login
+                      Profile
                     </Button>
                   </Link>
         </Nav>
