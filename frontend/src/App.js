@@ -3,11 +3,13 @@ import './App.css';
 import Header from './components/Header';
 import Home from './components/Home'
 import Cart from './components/Cart'
+import DarkVariantExample from './components/DarkVariantExample';
 
 function App() {
   return (
     <BrowserRouter>
-      <Header/>
+      {/* <Header/>*/
+      <DarkVariantExample/>/*
       <div className='App'>
       <Routes>
 
@@ -15,7 +17,7 @@ function App() {
         }/>
         <Route path='/cart' exact Component={Cart}/>
       </Routes>
-      </div>
+      </div> */}
     </BrowserRouter>
     
   );
