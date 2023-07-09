@@ -17,7 +17,20 @@ import {
   MDBListGroup,
   MDBListGroupItem
 } from 'mdb-react-ui-kit';
+
+import {
+  Badge,
+  Button,
+  Container,
+  Dropdown,
+  FormControl,
+  Nav,
+  Navbar,
+} from "react-bootstrap";
+import Image from '../UploadImage';
 import { Link, NavLink } from 'react-router-dom';
+import UserProfile from '../Form';
+import CoursePathwayPage from '../Path/Path';
 
 export default function ProfilePage() {
   return (
@@ -201,6 +214,12 @@ export default function ProfilePage() {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+      <Link to="/Form">
+                    <Button style={{ width: "95%", margin: "0 10px" }}>
+                     Update Your Credentials
+                    </Button>
+      </Link>
+    <CoursePathwayPage/>
     </section>
   );
 }

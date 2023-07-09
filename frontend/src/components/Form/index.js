@@ -53,6 +53,7 @@ import {
       MDBCheckbox,
       MDBBtn
     } from 'mdb-react-ui-kit';
+import UploadImage from '../UploadImage';
 export default function UserProfile() {
     const [inputs, setInputs] = useState({
       firstName: '',
@@ -82,12 +83,16 @@ export default function UserProfile() {
     };
   
     return (
+      <>
+       <div class="float-right">
+            <UploadImage/>
+        </div>
       <div className='col-12 align-items-center justify-content-center'>
         <br />
         <h1>Update your Profile</h1>
         <br></br>
-        <form className='col-6 align-items-center justify-content-center' onSubmit={handleSubmit}>
-          <MDBRow className='mb-4'>
+        <form className='col-6 align-items-center justify-content-center justify-self' onSubmit={handleSubmit}>
+          <MDBRow className='mb-4 '>
             <MDBCol>
               <MDBInput
                 id='form6Example1'
@@ -162,21 +167,18 @@ export default function UserProfile() {
             value={inputs.additionalInfo}
             onChange={handleInputChange}
           />
-  
-          <MDBCheckbox
-            wrapperClass='d-flex justify-content-center mb-4'
-            id='form6Example8'
-            label='Create an account?'
-            name='createAccount'
-            checked={inputs.createAccount}
-            onChange={handleInputChange}
-          />
-  
+          <label class="form-label">Upload File!</label>
+            <input type="file" class="form-control" />
+            <br/>
           <MDBBtn className='mb-4' block type='submit'>
-            Place order
+            Update
           </MDBBtn>
+          
         </form>
+        
       </div>
+     
+            </>
     );
   }
   

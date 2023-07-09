@@ -81,12 +81,19 @@ const Header = () => {
                       Go To Cart
                     </Button>
                   </Link>
+                
+                 
                 </>
               ) : (
                 <span style={{ padding: 10 }}>Cart is Empty!</span>
               )}
             </Dropdown.Menu>
           </Dropdown>
+          <Link to="/Profile">
+                    <Button style={{ width: "95%", margin: "0 10px" }}>
+                      Login
+                    </Button>
+                  </Link>
         </Nav>
       </Container>
     </Navbar>
