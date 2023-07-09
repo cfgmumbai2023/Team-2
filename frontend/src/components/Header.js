@@ -1,5 +1,7 @@
 import { FaShoppingCart } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
+import React from 'react';
+import ChatBot from '../components/Chatbot';
 import {
   Badge,
   Button,
@@ -13,7 +15,9 @@ import { Link, useLocation } from "react-router-dom";
 import { CartState } from "../context/Context";
 import "./styles.css";
 
+
 const Header = () => {
+  const [modalShow, setModalShow] = React.useState(false);
   const {
     state: { cart },
     dispatch,
@@ -43,6 +47,16 @@ const Header = () => {
             />
           </Navbar.Text>
         )}
+
+        <Nav>
+        <Button variant="primary" onClick={() => setModalShow(true)}>
+            <i class="fa fa-question-circle-o"></i> Ask for help
+            </Button>
+            {<ChatBot
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />}
+        </Nav>
         <Nav>
           <Dropdown alignRight>
             <Dropdown.Toggle variant="success">
@@ -81,6 +95,9 @@ const Header = () => {
                       Go To Cart
                     </Button>
                   </Link>
+
+                
+
                 </>
               ) : (
                 <span style={{ padding: 10 }}>Cart is Empty!</span>
