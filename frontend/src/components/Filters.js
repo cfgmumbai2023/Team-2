@@ -45,7 +45,7 @@ const Filters = () => {
           checked={sort === "highToLow" ? true : false}
         />
       </span>
-      <span>
+      {/* <span>
         <Form.Check
           inline
           label="Include Out of Stock"
@@ -59,8 +59,8 @@ const Filters = () => {
           }
           checked={byStock}
         />
-      </span>
-      <span>
+      </span> */}
+      {/* <span>
         <Form.Check
           inline
           label="Fast Delivery Only"
@@ -74,7 +74,7 @@ const Filters = () => {
           }
           checked={byFastDelivery}
         />
-      </span>
+      </span> */}
       <span>
         <label style={{ paddingRight: 10 }}>Rating: </label>
         <Rating

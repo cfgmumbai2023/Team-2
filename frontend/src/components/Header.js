@@ -31,7 +31,7 @@ const Header = () => {
             <FormControl
               style={{ width: 500 }}
               type="search"
-              placeholder="Search a product..."
+              placeholder="Search a course..."
               className="m-auto"
               aria-label="Search"
               onChange={(e) => {
@@ -87,6 +87,11 @@ const Header = () => {
               )}
             </Dropdown.Menu>
           </Dropdown>
+          <Link to="/Profile">
+                    <Button style={{ width: "95%", margin: "0 10px" }}>
+                      Login
+                    </Button>
+                  </Link>
         </Nav>
       </Container>
     </Navbar>

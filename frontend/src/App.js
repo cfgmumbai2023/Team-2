@@ -3,21 +3,22 @@ import './App.css';
 import Header from './components/Header';
 import Home from './components/Home'
 import Cart from './components/Cart'
-import DarkVariantExample from './components/DarkVariantExample';
+import ProfilePage from './components/Profile';
 
 function App() {
   return (
     <BrowserRouter>
-      {/* <Header/>*/
-      <DarkVariantExample/>/*
+      <Header/>
       <div className='App'>
       <Routes>
 
         <Route path='/' exact Component={Home
         }/>
+        <Route path='/Profile' exact Component={ProfilePage
+        }/>
         <Route path='/cart' exact Component={Cart}/>
       </Routes>
-      </div> */}
+      </div>
     </BrowserRouter>
     
   );
