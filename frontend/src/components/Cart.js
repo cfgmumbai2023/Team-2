@@ -72,7 +72,7 @@ const Cart = () => {
                 <Col md={2}>
                   <Rating rating={prod.ratings} />
                 </Col>
-                <Col md={2}>
+                {/* <Col md={2}>
                   <Form.Control
                     as="select"
                     value={prod.qty}
@@ -90,7 +90,7 @@ const Cart = () => {
                       <option key={x + 1}>{x + 1}</option>
                     ))}
                   </Form.Control>
-                </Col>
+                </Col> */}
                 <Col md={2}>
                   <Button
                     type="button"
